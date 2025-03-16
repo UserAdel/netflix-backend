@@ -18,6 +18,7 @@ app.use(cookieParser());
 
 
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/movie", movieRoutes);
 
 
 app.get('/', (req, res) => res.send('Express on Vercel'));
@@ -25,6 +26,7 @@ app.get('/', (req, res) => res.send('Express on Vercel'));
 app.listen(PORT, () => {
     console.log("Server started at http://localhost:" + PORT);
     connectDB();
+    
 });
 
 export default app;
