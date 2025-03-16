@@ -17,6 +17,7 @@ app.use(cookieParser());
 
 
 
+app.use("/api/v1/auth", authRoutes);
 
 
 app.get('/', (req, res) => res.send('Express on Vercel'));
