@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
-app.listen(PORT, () => console.log(`Server ready on port ${PORT}`));
+app.listen(PORT, () => {
+    console.log("Server started at http://localhost:" + PORT);
+    connectDB();
+});
 
 export default app;
