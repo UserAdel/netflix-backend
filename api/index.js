@@ -11,6 +11,14 @@ import { protectRoute } from "../middleware/protectRoute.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(express.json()); // will allow us to parse req.body
+app.use(cookieParser());
+
+
+
+
+
+
 app.get('/', (req, res) => res.send('Express on Vercel'));
 
 app.listen(PORT, () => {
